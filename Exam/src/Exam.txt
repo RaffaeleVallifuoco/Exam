@@ -1,0 +1,152 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+
+        // ESAME TECNICO PROGRAMMAZIONE
+
+        // 1: Dichiarare un vettore vuoto, riempire il vettore di nominativi da
+        // tastiera, stampare il contenuto del vettore.
+
+       List<String> nomi = new ArrayList<>();
+       boolean loop = false;
+       String nome = null;
+       Scanner scan = new Scanner(System.in);
+       do {
+        System.out.println("Inserisci un nome : ");
+        nome = scan.nextLine();
+        nomi.add(nome);
+        boolean loopswitch = false;
+        System.out.println("Vuoi inserire un altro nome ? [S/N]");
+        String scelta = scan.nextLine().toLowerCase();
+       switch (scelta) {
+        case "s" -> {
+            loop = true;
+            break;
+        }
+        case "n" -> {
+            loop = false;
+           System.out.println("Inserimento terminato...");
+           break;
+        }
+       
+        default -> {
+            System.out.println("Scelta non valida ");
+        } 
+       }
+    }   for(String currentName : nomi) {
+        System.out.println(currentName + "\n");
+    }
+    
+
+
+
+        // 2: Dato un vettore di dimensione 10, riempire il vettore di numeri interi
+        // compresi tra -15 e +12, stampare la somma degli elementi del vettore
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Inserisci 10 numeri compresi in [-15, 17]");
+        int vettore[] = new int[10];
+        int somma = 0;
+        for (int i = 0; i < vettore.lenght(); i++) {
+            System.out.println("Inserisci il numero " + i + 1 + ": ");
+            int insert = input.nextInt();
+            if (insert >= -15 && insert <= 17) {
+                System.out.println("Numero valido");
+                vettore[i] = insert;
+                somma += vettore[i];
+                i++;
+            } else {
+                System.out.println("Numero non valido !");
+            }
+        }
+        System.out.println("La somma dei numeri del vettore è ; " + somma);
+        input.close();
+
+        // 3: dato un array [24, 81, 3, 18, 19] scrivere un programma che faccia la
+        // ricerca all'interno del vettore di un valore scelto dall’utente.
+
+        int[] array = { 24, 81, 3, 18, 19 };
+        Scanner input2 = new Scanner(System.in);
+        System.out.println("Inserisci un numero da ricercare nell'array :");
+        int choice = input2.nextInt();
+        boolean find = false;
+        for (int current : array) {
+            if (current == choice) {
+                find = true;
+                break;
+            }
+        }
+        System.out.println(
+                find ? "Numero trovato" : "Numero non trovato !");
+
+
+
+        // 4: Riempire una lista di 5 elementi [11, 22, -5, 10, 45] eliminare l'ultimo
+        // elemento e stamparne i restanti
+
+        // List<Integer> lista = new ArrayList<>();
+        // lista.add(11);
+        // lista.add(22);
+        // lista.add(-5);
+        // lista.add(10);
+        // lista.add(45);
+        // lista.remove(Integer.valueOf(45));
+        List<Integer> lista = new ArrayList<>(List.of(11;22;-5;10;55);
+        lista.remove(lista.size() -1);
+        for(String current : lista){
+            System.err.println(current + "\n");
+        }
+
+
+
+
+
+        // 5: utilizzando una classe model Persona (id, nome, cognome, sesso [m/f/a]),
+        // esistente (già implementata), istanziare tre oggetti p1, p2, p3 assegnare i
+        // valori e stamparne il contenuto
+
+        p1 = new Persona();
+        p1.id =
+        p1.nome.....
+        System.out.println(p1.toString);
+
+        Persona p1 = Persona.of(1, "Mario", "Rossi", 'm');
+        Persona p2 = Persona.of(2, "Luca", "Verdi", 'm');
+        Persona p3 = Persona.of(3, "Anna", "Bianchi", 'f');
+
+        
+
+
+
+
+
+        // 6: utilizzando una classe model Persona (id, nome, cognome, sesso [m/f/a]),
+        // esistente (già implementata), istanziare tre oggetti p1, p2, p3 assegnare i
+        // valori agli oggetti mediante il costruttore parametrizzato e stamparne il
+        // contenuto
+
+        p1 = new Persona(1,Mario,Rossi,m);
+        System.out.println(p1;);
+        System.out.printlnf("Id: %d, Nome : %s..", p1.id, p1.nome....);
+
+
+
+
+
+        // 7: data una lista di interi [34, 56,32, 78, 99, 2] contare quanti sono i
+        // numeri pari e ottenere la loro somma
+
+        List<Integer> numbers = new ArrayList<>(List.of(34, 56, 32, 78, 2));
+        // int sum = 0;
+        // for(int current : numbers){
+        //     if(current%2 == 0) {
+        //         sum += current;
+        //     }
+        // }
+        // System.out.printf("La somma dei numeri pari della lista è : %d", sum);
+
+    
+}
